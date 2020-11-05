@@ -10,8 +10,8 @@ namespace ObjectExercise_2
     {
         class DictEntry
         {
-            string swedish, english;
-            public DictEntry (string swe, string eng)
+            public string swedish, english;
+            public DictEntry (string eng, string swe)
             {
                 swedish = swe;
                 english = eng;
@@ -27,6 +27,20 @@ namespace ObjectExercise_2
             dict[4] = new DictEntry("moon", "måne");
             dict[5] = new DictEntry("move", "flytta");
             dict[6] = new DictEntry("city", "stad");
+            Console.WriteLine("{0,-10}{1,-20}",
+                    "English", "Swedish");
+            Console.WriteLine("--------------------");
+            for (int i = 0; i < dict.Length; i++)
+            {
+                if ( dict[i] != null)
+                { 
+                    Console.WriteLine("{0,-10}{1,-20}",
+                    dict[i].english, dict[i].swedish);
+
+                }
+               
+            }
+            Console.WriteLine("--------------------");
         }
     }
 }
